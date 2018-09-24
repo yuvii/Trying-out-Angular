@@ -1,0 +1,40 @@
+{
+  "name": "Actind4",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@angular/animations": "^6.1.8",
+    "@angular/common": "^6.1.8",
+    "@angular/compiler": "^6.1.8",
+    "@angular/compiler-cli": "^6.1.8",
+    "@angular/core": "^6.1.8",
+    "@angular/forms": "^6.1.8",
+    "@angular/http": "^6.1.8",
+    "@angular/platform-browser": "^6.1.8",
+    "@angular/platform-browser-dynamic": "^6.1.8",
+    "@angular/platform-server": "^6.1.8",
+    "@babel/runtime": "7.0.0-beta.55",
+    "@ionic/storage": "^2.2.0",
+    "angular2-moment": "^1.9.0",
+    "ionic-angular": "^3.9.2",
+    "ionic-native": "^2.9.0",
+    "ionicons": "^4.4.3",
+    "meteor-node-stubs": "^0.4.1",
+    "moment": "^2.22.2",
+    "rxjs": "^6.3.2",
+    "typescript": "^3.0.3",
+    "zone": "^0.3.4"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.ts",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.js"
+  }
+}
