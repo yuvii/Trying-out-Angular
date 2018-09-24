@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as Moment from 'moment';
-import { Observable } from 'rxjs/Observable';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Chat, MessageType } from '../../../../imports/models';
 
 import template from './chats.html';
@@ -17,7 +18,7 @@ export class ChatsPage {
     }
 
     private findChats(): Observable<Chat[]> {
-        return Observable.of([
+        return of([
             {
                 _id: '0',
                 title: 'Ethan Gonzalez',
@@ -72,7 +73,7 @@ export class ChatsPage {
       }
 
       removeChat(chat: Chat): void {
-        this.chats = this.chats.map<Chat[]>(chatsArray => {
+        this.chats = map(chatsArray => {
           const chatIndex = chatsArray.indexOf(chat);
           chatsArray.splice(chatIndex, 1);
 
